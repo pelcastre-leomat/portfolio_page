@@ -1,0 +1,146 @@
+:root {
+    --heart-animT: 7s;
+    --heart-upColor: rgb(247, 140, 158);
+    --heart-downColor: blue;
+
+    --animBg-time: 7s;
+    --animBg-c1: #50ACBD;
+    --animBg-c2: rgb(248, 171, 184);
+}
+
+.animBg {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+
+    animation-name: animBg;
+    animation: animBg 7s infinite;
+    background:radial-gradient(at bottom, circle, var(--animBg-c2), var(--animBg-c1));
+    background: -webkit-radial-gradient(top, circle, var(--animBg-c2), var(--animBg-c1));
+
+}
+
+@keyframes animBg {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.heart {
+    animation-name: base;
+    animation-duration: var(--heart-animT);
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;    
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--heart-upColor);
+    width: 100px;
+    height: 100px;
+    transform: rotate(-45deg);
+    border-radius: 10%;
+}
+
+.heart::before {
+    content: "";
+    margin: auto;
+    position: absolute;
+    animation-iteration-count: infinite;
+    top: -100px;
+    right: 0px;    
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--heart-upColor);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation-name: left-side;
+    animation-duration: var(--heart-animT);
+    animation-fill-mode: forwards;
+}
+
+.heart::after {
+    animation-name: right-side;
+    animation-duration: var(--heart-animT);
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    right: -100px;    
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--heart-upColor);
+    width: 100px;
+    height: 100px;
+    
+}
+
+
+@keyframes base {
+    0% {
+        background-color: var(--heart-upColor);
+    }
+
+    50% {
+        background-color: var(--heart-downColor);
+    }
+
+    100% {
+        background-color: var(--heart-upColor);
+    }
+}
+
+@keyframes left-side {
+    0%{
+        background-color: var(--heart-upColor);
+        top: -100px;
+    }
+
+    50% {
+        background-color: var(--heart-downColor);
+        top: 100px;
+    }
+
+    100% {
+        background-color: var(--heart-upColor);
+        width: 100px;
+    }
+    
+}
+
+@keyframes right-side {
+    0%{
+        background-color: var(--heart-upColor);
+        right: -100px;
+    }
+
+    50% {
+        background-color: var(--heart-downColor);
+        left:-200px;
+    }
+
+    100% {
+        background-color: var(--heart-upColor);
+        right:-100px;
+    }
+
+    
+}
