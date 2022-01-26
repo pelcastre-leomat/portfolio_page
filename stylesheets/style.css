@@ -1,0 +1,71 @@
+:root {
+    --animBg-time: 7s;
+    --animBg-c1: #50ACBD;
+    --animBg-c2: rgb(248, 171, 184);
+}
+
+/*Refactor with SASS, compress heart definitions as much as possible?*/
+
+.animBg {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+
+    animation-name: animBg;
+    animation: animBg 7s infinite;
+    background:radial-gradient(at bottom, circle, var(--animBg-c2), var(--animBg-c1));
+    background: -webkit-radial-gradient(top, circle, var(--animBg-c2), var(--animBg-c1));
+
+}
+
+@keyframes animBg {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+
+.navbar {
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    float: left;
+    padding-right: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(63, 147, 153);
+}
+
+.navbar a:visited {
+    color: rgb(63, 147, 153);
+}
+
+.navbar a:hover {
+    color: rgb(255, 212, 219);
+}
