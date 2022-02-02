@@ -15,30 +15,25 @@ body {
     background-size: cover;
     background-repeat:   no-repeat;
     background-position: 0px 0px; 
+    background-attachment: fixed;
 }
 
 .item1 {
     background-color: var(--sidebarColor);
     grid-area: advert;
-    border-radius: 0 10px 0 0;
 }
 
 .item2 {
     grid-area: content;
-/*     
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/background_mountain.JPG);
-    background-size: cover;
-    background-repeat:   no-repeat;
-    background-position: 0px 0px;  */
+    height: 100vh;
 }
 
 .item3 {
     background-color: var(--sidebarColor);
-
-    border-radius: 0 0 10px 0;
     grid-area: footer;
 }
 
+/* Change width of sidebar */
 .container {
     font-size: 1.5em;
     min-height: 300px;
@@ -53,12 +48,21 @@ body {
         "footer";
 }
 
-.bio {
+.bio-wrapper {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    justify-content: center;
+    /*height:100%*/
+    padding-top: 30vh;
     align-items: center;
+}
+
+.bio-text {
+    width: 50%;
+    text-align: center;
+    font-family: 'Sora',fantasy;
+    font-weight: bold;
+    color: white;
 }
 
 #profile-img {
