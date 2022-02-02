@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylesheets/fonts/fonts.css">
 </head>
+
+<!-- Adaptability for height scale, img should scale at certain height -->
+
 <body>
     <div class="container">
         <div class="item1">sidebar</div>
         <div class="item2">
             <div class="bio-wrapper">
                 <!-- Implement grid system so image is on top of text -->
-                <img id="profile-img" src="images/portfolio_img.jpg" width="200px" height="200px">
+                <div class="profile-img-wrapper">
+                    <img id="profile-img" class src="images/portfolio_img.jpg" width="200px" height="200px" alt="Leonardo Matias Pelcastre profile picture">
+                </div>
                 <div class="bio-text">
                     <p>Developer, Leo</p>
                 </div>
+            </div>
+            <div class="pull_up">
+                <img src="images/pull_up.png" alt="Scroll up symbol" width="40px" height="40px">
             </div>
         </div>
         <div class="item3">sidebar_footer</div>

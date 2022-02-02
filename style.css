@@ -52,9 +52,28 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /*height:100%*/
-    padding-top: 30vh;
+    height:100%;    
     align-items: center;
+    justify-content: center;
+}
+
+.pull_up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.pull_up img {
+    filter: invert(100%);
+}
+
+.profile-img-wrapper {
+    justify-self: center;
+}
+
+#profile-img {
+    border-radius: 50%;
 }
 
 .bio-text {
@@ -65,14 +84,9 @@ body {
     color: white;
 }
 
-#profile-img {
-    border-radius: 50%;
-}
-
-
 @media (min-width: 300px){
     .container{
-        grid-template-columns: 2fr 6fr;
+        grid-template-columns: 2fr 8fr;
         grid-template-rows: 33.333vh 53.333vh 13.333vh;
         grid-template-areas:
         "advert content"
@@ -84,10 +98,8 @@ body {
 @media (min-width: 400px){
     .container{
         grid-template-areas:
-        /* Only change code below this line */
         "advert content"
         "advert content"
         "footer content";
-        /* Only change code above this line */
     }
 }
