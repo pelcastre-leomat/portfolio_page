@@ -63,6 +63,14 @@ body {
     justify-content: center;
 }
 
+/* .pull_up {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+} */
+
 .pull_up {
     display: flex;
     align-items: center;
@@ -72,7 +80,25 @@ body {
 
 .pull_up img {
     filter: invert(100%);
+    -webkit-animation: pull-up 1.5s infinite  normal ease-out;
+    animation: pull-up 1.5s infinite  normal ease-out;
 }
+
+@keyframes pull-up {
+    0%{
+        width: 40px;
+    }
+
+    50% {
+        width: 45px;
+    }
+
+    100% {
+        width: 40px;
+    }
+}
+
+
 
 .profile-img-wrapper {
     justify-self: center;
